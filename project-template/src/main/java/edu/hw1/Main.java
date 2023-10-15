@@ -4,7 +4,8 @@ import java.util.Arrays;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
+// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+// then press Enter. You can now see whitespace characters in your code.
 public final class Main {
     private final static Logger LOGGER = LogManager.getLogger();
     static final int SECONDS = 60;
@@ -48,7 +49,10 @@ public final class Main {
         }
 //        number -= (long) number;
 //        while (Math.abs(number - (int) number) > 1e-16 && ans <= LIMIT_OF_CAPACITY) {
-//
+//        /*если число нецелое, то в double оно
+//        хранится в виде мантиссы и степени, при этом в мантиссе может быть
+//        максимум шестнадцать знаков (по крайней мере на моем компьютере),
+//        так что продолжать цикл дальше бесполезно для нецелых чисел большей длины)*/
 //            number *= DIVIDER;
 //            ans += 1;
 //        }
@@ -58,7 +62,7 @@ public final class Main {
         return ans;
     }
 
-    static double min(double[] arr) {
+    static double min(double[] arr) { //для task_3
         double min = arr[0];
         for (double value
             : arr) {
@@ -69,7 +73,7 @@ public final class Main {
         return min;
     }
 
-    static double max(double[] arr) {
+    static double max(double[] arr) {   //для task_3
         double max = arr[0];
         for (double value
             : arr) {
@@ -199,7 +203,7 @@ public final class Main {
     static final int LONG_STEP = 2;
     static final int SHORT_STEP = 1;
 
-    static boolean oneKnightCheck(int[][] field, int xCrd, int yCrd) {
+    static boolean oneKnightCheck(int[][] field, int xCrd, int yCrd) {  //for_task_8
         return !(field[xCrd + LONG_STEP][yCrd + SHORT_STEP] == 0
             && field[xCrd + SHORT_STEP][yCrd + LONG_STEP] == 0
             && field[xCrd - LONG_STEP][yCrd - SHORT_STEP] == 0
