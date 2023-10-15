@@ -34,7 +34,7 @@ public final class Main {
         }
     }
 
-    final static int LIMIT_OF_CAPACITY = 16;
+    //final static int LIMIT_OF_CAPACITY = 16;
     final static int DIVIDER = 10;
 
     static int countDigits(double number) { //task_2
@@ -62,7 +62,7 @@ public final class Main {
         return ans;
     }
 
-    static double min(double[] arr) { //для task_3
+    static double min(double[] arr) {
         double min = arr[0];
         for (double value
             : arr) {
@@ -73,7 +73,7 @@ public final class Main {
         return min;
     }
 
-    static double max(double[] arr) {   //для task_3
+    static double max(double[] arr) {
         double max = arr[0];
         for (double value
             : arr) {
@@ -166,7 +166,7 @@ public final class Main {
             - Integer.parseInt(String.valueOf(minNumberStr))) + 1;
     }
 
-    static int countK(int number) { //task_6 ????????????????????????????
+    static int countK(int number) { //task_6
         if (number <= MIN || number >= MAX) {
             return -1;
         }
@@ -203,7 +203,7 @@ public final class Main {
     static final int LONG_STEP = 2;
     static final int SHORT_STEP = 1;
 
-    static boolean oneKnightCheck(int[][] field, int xCrd, int yCrd) {  //for_task_8
+    static boolean oneKnightCheck(int[][] field, int xCrd, int yCrd) {
         return !(field[xCrd + LONG_STEP][yCrd + SHORT_STEP] == 0
             && field[xCrd + SHORT_STEP][yCrd + LONG_STEP] == 0
             && field[xCrd - LONG_STEP][yCrd - SHORT_STEP] == 0
